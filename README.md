@@ -66,4 +66,3 @@ Real UCI benchmark ingestion and attribution are documented in `UCI_DATA.md`. Th
 The sign-in page includes Forgot password and a reset form. Links expire after 30 minutes, work once, and revoke previous sessions after the password changes. Configure PUBLIC_APP_URL and SMTP_HOST, SMTP_PORT, SMTP_FROM, SMTP_USER, SMTP_PASSWORD in `.env`, then recreate the API container to enable email delivery over STARTTLS. Without SMTP, the screen explains that administrator assistance is required.
 
 For a local owner whose identity has been verified, an operator can run `docker compose exec api python -m app.recovery --store Designx --output /data/recovery/designx-link.txt`. The private file contains the reset URL; give it only to that owner. Generating a link leaves the existing password unchanged. The owner enters the new password on the reset page.
-# Scaleable-
